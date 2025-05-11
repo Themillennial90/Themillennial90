@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<!-- shows name of page in the tab -->
+<head>
+    <title>CPCC Gaming News</title>
+    <link href='style.css' rel='stylesheet'>
+</head>
+
+<body>
+
+
+    <!-- shows form username and password as Text-->
+    <form>
+        
+        <h3>Sign in Here</h3>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="userPW">Password:</label>
+        <input type="password" name= "user-pw"id="userPW">
+        
+        <!--Shows range slider-->
+        <section class="rate">
+            <label for="WebRate">What do you think of the website?</label>
+            <br>
+            <span>Okay</span>
+             <input type="range" id="WebRate" name="WebRate" min="0" max="5" step="0.5">
+  
+  
+            
+            <span>Great</span>
+          </section>
+<!--Shows date and time as well as counter by seconds-->
+          <span id="datetime"></span>
+          <script>
+            function updateDateTime() {
+              const now = new Date();
+              const currentDateTime = now.toLocaleString();
+              document.querySelector('#datetime').textContent = currentDateTime;
+            }
+            setInterval(updateDateTime, 1000);
+          </script>
+
+
+        </form>
+    
+        </body>
+    
+
+
+
+    <!-- Displays weclome message -->
+    <h1> Welcome to central piedmont community college Gaming News</h1>
+
+    <h2>Whats Popular</h2>
+
+<!-- Displays links in a list format and allows for user to click the picture instead of the text  -->
+
+    <nav>
+        <ol>
+            <!-- using images from the file as a clickable link-->
+            <h3>Elden Ring</h3>
+            <div class ="ring">
+            <li><a href="https://www.ign.com/games/elden-ring/user-reviews" target="_blank"><img
+                        src="elden-ring-button-03-1623460560664.webp"></a></li>
+                    </div>
+
+
+            <h3>Baldurs Gate 3</h3>
+            <li><a href="https://www.ign.com/games/baldurs-gate-iii/user-reviews" target="_blank"><img
+                        src="baldursg3-1692894717196.webp"></a></li>
+
+
+            <h3>Final Fantasy VII Rebrith</h3>
+            <li><a href="https://www.ign.com/games/final-fantasy-vii-rebirth/user-reviews" target="_blank"><img
+                        src="ff7rebirth-1705691603436.webp"></a></li>
+
+
+            <h3><strong>God of War: Ragnarok</strong></h3>
+            <li><a href="https://www.ign.com/games/god-of-war-ragnarok/user-reviews" target="_blank"><img
+                        src="god-of-war-ragnarok-button-1631231879154.webp" class="img-thumbnail"
+                        alt="God of War: Ragnarok"></a></li>
+        </ol>
+    </nav>
+    <section>
+
+    <form> <!--Shows checkboxes-->
+        <section class="Genre">
+            <span>What Games do you like?</span>
+            <br>
+            <label for="RPG">RPG</label>
+            <input type="checkbox" id="RPG" name="RPG Genre" value="RPG">
+  
+  
+            
+            <label for="FPS">FPS</label>
+            <input type="checkbox" id="FPS" name="FPS Genre" value="FPS">
+        </section>
+      </form>
+    </section>
+    <!--Shows radio button-->
+
+
+    <section class="likes">
+        <span>Do you like video games?</span>
+        <br>
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="likes" value="yes">
+
+
+        <label for="yes">Yes</label>
+        <label for="no">No</label>
+        <input type="radio" id="no" name="likes" value="no">
+
+
+        <label for="no">No</label>
+      </section>
+<!--Shows drop down menu allows user to select the game they want to play-->
+      <label for="pick">Which Game Are You Going to Play:</label>
+      <select name="pick" id="pick">
+         <option value="Elden Ring">Elden Ring</option>
+         <option value="Baldurs Gate 3">Baldurs Gate 3</option>
+         <option value="Final Fantasy VII">Final Fantasy VII</option> 
+         <option value="God of War: Ragnarok">God of War: Ragnarok</option>
+        </select>
+    
+        
+        
+        
+        <section class="game-selection">
+            <form>
+            <label for="EnterGame">What type of game would you like?</label>
+  <input type="text" list="EnterGames" id="EnterGame" name="EnterGame">
+  <input type="text" id="EnterGames" name="EnterGame" list="EnterGames">
+  <datalist id="EnterGames">
+    <option value="Elden Ring">
+        <option value="Baldurs Gate 3">
+            <option value="Final Fantasy VII"> 
+                <option value="God of War: Ragnarok"> 
+
+                </datalist>
+            </form>
+  
+</section>
+<!--Adds submissions and adjust textbox-->
+<section class="new-ideas">
+    <label for="ideas">Would you like to submit a ideas for the website?</label>
+    <br>
+    <textarea id="ideas" name="ideas" rows="3" cols="40">Send your ideas</textarea>
+    <section class="extra-info">
+        <label for="ideas">Anything else?</label>
+        <textarea id="ideas" name="ideas" rows="3" cols="40">Add addional ideas here</textarea>
+        <section class="submission">
+            <input type="submit" value="Submit">
+</section>
+
+<!-- setting up twitter feed  -->
+    <h2> What is IGN Saying</h2>
+    <a href="https://twitter.com/intent/tweet?button_hashtag=twsrc^google|twcamp^serp|twgr^author&ref_src=twsrc%5Etfw"
+        class="twitter-hashtag-button" data-show-count="false">Tweet #twsrc^google|twcamp^serp|twgr^author</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</body>
+
+</html>
